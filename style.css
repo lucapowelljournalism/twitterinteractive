@@ -1,0 +1,515 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+}
+
+/* ----------- Layout Section for all Sizes (in process) -----------  */
+h1, h2 {
+    margin-top: 10%;
+    line-height: 1em;
+    display: inline-flex;
+}
+
+h4 {
+    margin-left: 10%;
+    line-height: 1em;
+    display: inline-flex;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+.header {
+    border-top: 1px dotted #BDCEDA;
+    border-bottom: 1px dotted #BDCEDA;
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.header img {
+    height: 15px;
+    display: inline;
+    padding: 0;
+}
+
+.header span {
+    display: inline-flex;
+}
+
+.filter {
+    text-align: left;
+    width: 40%;
+    display: block;
+    height: 30px;
+    background-color: #BDCEDA;
+    border: 0;
+    font-size: .75em;
+    font: white;
+    float: right;
+    padding-left: 5px
+}
+
+.frame {
+    border-top: 1px dotted #BDCEDA;
+    display: inline-block;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.numero {
+    width: 80%;
+    display: inline;
+    vertical-align: middle;
+    height: 45px;
+    font-size: .75em;
+}
+
+strong {
+    border-radius: 20px;
+    width: 25px;
+    height: 25px;
+    background: #BDCEDA;
+    font-family: Verdana;
+    font-weight: bold;
+    color: white;
+    font-size: 1.75em;
+    vertical-align: middle;
+    float: left;
+    margin-right: 10px;
+}
+
+.slidecontainer {
+    display: inline;
+    height: 40px;
+    float: right;
+    width: 60%;
+}
+
+.text {
+    height: 100%;
+    display: block;
+    line-height: 1.5;
+    padding-bottom: 10px;
+    height: 100%;
+    padding-top: 0px;
+}
+
+/* ------- Temporary while we figure some things out ------*/
+.container.tweets {
+    margin-left: 0px;
+    padding: 0px;
+}
+
+.container.output {
+    float: left;
+    font-size: .75em;
+    display: inline;
+    width: 15%;
+}
+
+#dateoutput, #hashtagoutput, #trendingoutput {
+    color: red;
+    margin-left: 5px;
+}
+
+/*------Webpage layout for Mobile Small Screens-----*/
+@media screen and (max-device-width: 774px) {
+    .container {
+        width: 85%;
+        margin: 0 auto;
+        padding: 1em;
+        height: auto;
+    }
+
+    .container img {
+        display: none;
+        width: 100%;
+        padding-top: 60px;
+    }
+
+    .header {
+        width: 90%;
+        font-size: .8em;
+        border-bottom: 1px dotted #BDCEDA;
+        padding-bottom: 15px;
+        line-height: .85em;
+        text-align: center;
+    }
+
+    .header img {
+        display: inline;
+        padding: 0;
+        width: 30px;
+    }
+
+    .header span {
+        margin: 0px;
+    }
+
+    h1, h2, {
+        text-align: left;
+        line-height: 1.25em
+    }
+
+    h4 {
+        text-align: center;
+        margin-left: 0;
+        padding-bottom: 5px;
+    }
+
+    h2 {
+        top: 5%
+    }
+
+    .text {
+        width: 100%;
+        font-size: .80em;
+        margin-top: 10px;
+    }
+
+    .frame {
+        width: 85%;
+        margin: auto 0;
+    }
+
+    .filter {
+        float: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .container .tweets {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .container .output {
+        display: block;
+        float: none;
+        width: 100%;
+        padding: 4px;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+
+    .twittercontainer {
+        margin-left: 0px;
+        border-top: 1px dotted #BDCEDA
+    }
+
+    .output {}
+}
+
+/*------Webpage layout for Medium Size-----*/
+@media screen and (min-width: 775px) and (max-width: 1100px) {
+    h1, h2, h4 {
+        text-align: left;
+        line-height: 1em;
+        margin-right: 10%;
+    }
+
+    h1 {
+        margin-top: 8%;
+    }
+
+    h4 {
+        margin-top: 2%
+    }
+
+    .numero {
+        width: 80%;
+        display: inline;
+        vertical-align: middle;
+        height: 45px;
+        padding: 0px;
+        font-size: 1em;
+    }
+
+    .container {
+        width: 85%;
+        margin: 10 auto;
+        padding: 1em;
+        height: auto;
+    }
+
+    .container img {
+        width: 100%;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px dotted #bdceda;
+    }
+
+    .frame {
+        width: 100%;
+        text-align: center;
+        margin: auto 0;
+    }
+
+    .text {
+        width: 95%;
+        font-size: .85em;
+        padding-bottom: 20px;
+        column-count: 2;
+    }
+
+    /* these 2 could be deleted soon
+    .twcontainer {
+        border-top: 1px solid #BDCEDA;
+        width: 85%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 40px;
+    }
+    #tweets {
+        flex-basis: 1%;
+        padding: 5px;
+        */
+}
+
+/*------ Webpage Layout ------Big Screens*/
+@media only screen and (min-device-width: 1101px) {
+    h1 {
+        text-align: left;
+        line-height: 1em;
+        font-size: 3em;
+        margin-bottom: 1%;
+        margin-top: 2%
+    }
+
+    h2 {
+        display: block;
+        border-top: 1px dotted #BDCEDA;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    h4 {
+        text-align: left;
+        margin-left: 1%;
+        margin-top: 3px;
+        display: inline-flex;
+        margin-bottom: 5px;
+    }
+
+    .container {
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 20px;
+        max-width: 1400px
+    }
+
+    .container img {
+        width: 65%;
+        border-radius: 0px;
+        float: right;
+        padding-left: 10px;
+        border-left: 1px solid #bdceda;
+        margin-bottom: 0px;
+    }
+
+    .header img {
+        width: 60px
+    }
+
+    .calendar {
+        width: 85%
+    }
+
+    .header {
+        border-top: 1px dotted #BDCEDA;
+        border-bottom: 1px dotted #BDCEDA;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        margin-bottom: 10px
+    }
+
+    .header img {
+        height: 20px;
+        display: inline;
+        padding: 0;
+        border-radius: 5px;
+    }
+
+    .header span {
+        display: inline-flex;
+        float: right;
+        margin-right: 15px;
+        padding-top: 3px;
+    }
+
+    /* .legend {
+        width: 220px;
+        height: 90px;
+        background-color: #BDCEDA;
+        position: relative;
+        top: 300px;
+        left: 700px;
+    }
+*/
+    /* -----------Forms section -----------  */
+    .filter {
+        text-align: left;
+        width: 40%;
+        display: block;
+        height: 30px;
+        background-color: #BDCEDA;
+        border: 0;
+        font-size: .75em;
+        font: white;
+        float: right;
+        padding-left: 5px
+    }
+
+    .frame {
+        border-top: 1px dotted #BDCEDA;
+        width: 30%;
+        display: inline-block;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+
+    .numero {
+        width: 80%;
+        display: inline;
+        vertical-align: middle;
+        height: 45px;
+        font-size: .8em;
+        font-size: .8vw;
+    }
+
+    .numero span {
+        border-radius: 20px;
+        width: 25px;
+        height: 25px;
+        background: #BDCEDA;
+        font-family: Verdana;
+        font-weight: bold;
+        color: white;
+        font-size: 1.75em;
+        vertical-align: middle;
+        float: left;
+        margin-right: 10px;
+    }
+
+    .slidecontainer {
+        display: inline;
+        height: 40px;
+        float: right;
+        width: 60%;
+    }
+
+    .text {
+        height: 100%;
+        width: 33%;
+        font-size: .8em;
+        display: block;
+        line-height: 1.5;
+        padding-bottom: 10px;
+        height: 100%;
+        padding-top: 0px;
+        margin-right: 10px;
+        padding-right: 10px;
+    }
+
+    .container.contenttext {
+        border-top: 1px dotted #BDCEDA;
+        width: 100%
+    }
+
+    .twittercontainer {
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 0px;
+        border-top: 1px dotted #BDCEDA;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    /*------------- Tweets section -----------  To Be Deleted? */
+    #tweets {
+        flex-basis: 0;
+        padding: 5px;
+        margin: 0 auto;
+        border: 0;
+        display: block;
+        border-radius: 20px;
+        width: 20%;
+        height: auto;
+    }
+
+    .tweet {
+        /*change to flexbox*/
+        display: inline-block;
+        width: 300px;
+    }
+}
+
+/* ------- Luca Code ------*/
+.calendar {
+    margin-top: 0px;
+    float: right;
+    height: 100%;
+}
+
+li {
+    display: inline;
+    line-height: 2em;
+    padding: 10px;
+    border-style: inset;
+}
+
+.datebutton {
+    background-color: #BDCEDA;
+    border: none;
+    font-size: .75em;
+    width: 20px;
+    padding: 4px;
+}
+
+.output {
+    text-align: left;
+    font-size: 20px;
+    text-transform: uppercase;
+    height: 20px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.output p {
+    display: inline;
+}
+
+blockquote.twitter-tweet {}
+
+#threetweetdisplaybox {
+    position: relative;
+    background-color: #F8F7F7;
+    float: left;
+    width: 100%;
+    height: 400px;
+    margin-top: 50px;
+}
+}
+
+.output p {
+    display: inline;
+    /*keeps everything horizontal in the output text for Date: and Hashtag:
+}

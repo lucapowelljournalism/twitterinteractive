@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <!-- set the character set -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- first step to a responsive site -->
+    <title>The Viral Twitter Virus</title>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- Your styles should be called here -->
+    <link rel="stylesheet" href="style.css" media="screen" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      	<![endif]-->
+  </head>
+
+  <body>
+    <!-- YOUR CONTENT GOES HERE -->
+
+
+
+
+    <div class="container">
+
+      <h1>Twitter Interactive! Ooh, baby! That's the spot!</h1>
+      <div class="header">
+        <h4>By: Luca Powell and Leonardo March</h4>
+        <span>Do you even twit, bro!<img src="img/twitter.png">
+          <a href="https://theuselessweb.com/">/Powell</a><img src="img/twitter.png">
+          <a href="https://theuselessweb.com/">/March</a></span>
+      </div>
+
+      <img src="img/world.svg">
+
+      <div class=" text">
+        Task 1) Design a layout that is intuitive. Layout should encourage users to test multiple hashtags. Users should feel like their curiosity is rewarded. Moving throughout the interactive should be easy, not confusing, ideally.
+
+        Simply CSS and Media Queries (Leo workin on this)
+        <br><br>\##LEO== CSS MASTER##
+        <br><br>To-do: Decide on mobile-friendly layout.
+        <br><br> Later: Styling rewarding results? (fly in tweets, etc.)
+        <br><br>MAYBE: Change date input to a slider.
+      </div>
+
+      <div class="container tweets">
+
+
+        <div class="legend"> </div>
+
+        <!--Luca: there was a .container class, inside another container. class
+        I deleted the inner one-->
+        <!--div for each filter.  .frame are just classes for design control-->
+
+        <div class="frame">
+          <div class="numero"><span>1 </span>Choose a hashtag </div>
+
+          <select class="filter">
+            <option> -Select a Hashtag-</option>
+            <option> #cuarentena </option>
+            <option> #quarantinelife </option>
+            <option> #socialdistancing </option>
+            <option> #stayathomechallenge </option>
+            <option> #coronavirus </option>
+          </select>
+        </div>
+
+        <div class="frame">
+          <!--div for each filter-->
+          <div class="numero"><span>2 </span>Choose a date</div>
+
+          <div class="calendar">
+            <ul>
+              <li class="datebutton" id="feb15">Feb 15</li>
+              <li class="datebutton" id="feb16">Feb 16</li>
+              <li class="datebutton" id="feb17">Feb 17</li>
+              <li class="datebutton" id="feb18">Feb 18</li>
+              <li class="datebutton" id="feb19">Feb 19</li>
+              <li class="datebutton" id="feb20">Feb 20</li>
+              <li class="datebutton" id="feb21">Feb 21</li>
+              <li class="datebutton" id="feb22">Feb 22</li>
+          </div>
+        </div>
+
+        <!--<div class="frame"
+          <div class="numero"><span>3</span>Choose a language</div>
+
+          <select class="filter">
+            <option value="Language">Language</option>
+            <option value="English">English</option>
+            <option value="Spanish">Spanish</option>
+            <option value="Italian">Italian</option>
+            <option value="French">French</option>
+          </select>-->
+
+      </div>
+
+
+      <!--for design purposes, I added a div here which format the output section: twittercontainer.
+    I also added a Trending section. I seeing this placed on a line, evenly spaced out. we can come add other
+    statisctical analysis here that are easy to see like, as an example:  Number of Tweets, how many in English, blah blah.
+    whatever is possible-->
+      <div class="twittercontainer">
+        <div class="container output">
+          <p>Date:<span id="dateoutput">
+          </p>
+        </div>
+
+        <div class="container output">
+          <p>Hashtag: <span id="hashtagoutput"><span></p>
+        </div>
+
+        <div class="container output">
+          <p>I'm trending baby: <span id="trendingoutput"></span></p>
+        </div>
+
+        <div class="container output">
+          <p>That's all you got?: <span id="thatsallyougot"></span></p>
+        </div>
+
+        <div class="container output">
+          <p>Just One more<span id="Justonemore:"></span></p>
+        </div>
+
+      </div>
+
+      <div class="container output" id="threetweetdisplaybox">
+        <div class="output">Tweets go here, here and here</div>
+
+      </div>
+
+      <div class="container contenttext">
+        <br><br>
+        <p>THIS IS FILLER Text, but we should probably have some down here too, maybe discussing some trends we found out about how
+          social media changed during covid.</p> <span id="trendingoutput">note from Leo:Yes, but this analysis should go at the top. Right before instructions</span></p>
+        <br><br>Task 2) Create a database (CSV) of tweets from Twitter's API that sorts tweets by these columns. ##Luca working on this
+        <br><br>Header Row: Hashtag, date, Geo_code(we just want country?), Tweet_Content, username
+        <br><br> Hashtag: Our basic idea is to use 5 hashtags only. But with Twitter API we can hopefully scrape more hashtags, from any time period. This means we will have two plans:
+        <br><br> Plan 1: 5 hashtags, already scraped.
+        <br><br> Plan 2: 10, 15 hashtags, from a broader time period. This plan depends on Luca learning how to scrape Twitter! He has a developer key though already, just needs to learn :)
+
+        <br><br>Task 3) Display tweets corresponding to user inputs. ##Leo and Luca
+        <br><br>First, select the correct tweets from the database
+        <br><br>Next, give the tweetss to the browser in some kind of format (could be images, more likely it could be our own 'fake' tweet css).
+        <br><br>Then, display the Tweet:
+        <br><br> - Either on the map (if we have geocode!)
+        <br><br> - Below the map (while we don't have geocode)
+      </div>
+
+    </div>
+    </div>
+
+    <!-- the jQuery library. You need this to be able to use jQuery ($) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    </div>
+    <!-- the jQuery library. You need this to be able to use jQuery ($) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Your javascript should be called here -->
+    <script src="main.js"></script>
+  </body>
+
+</html>
