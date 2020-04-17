@@ -38,7 +38,8 @@
           <a href="https://theuselessweb.com/">/March</a></span>
       </div>
 
-      <img src="img/world.svg">
+      <div class="map"> <img src="img/world.svg"></div>
+      <div class="legend">I'm a legend! </div>
 
       <div class=" text">
         Task 1) Design a layout that is intuitive. Layout should encourage users to test multiple hashtags. Users should feel like their curiosity is rewarded. Moving throughout the interactive should be easy, not confusing, ideally.
@@ -53,14 +54,14 @@
       <div class="container tweets">
 
 
-        <div class="legend"> </div>
+
 
         <!--Luca: there was a .container class, inside another container. class
         I deleted the inner one-->
         <!--div for each filter.  .frame are just classes for design control-->
 
         <div class="frame">
-          <div class="numero"><span>1 </span>Choose a hashtag </div>
+          <div class="numero"><span>1 </span>Choose a hastagh</div>
 
           <select class="filter">
             <option> -Select a Hashtag-</option>
@@ -86,6 +87,11 @@
               <li class="datebutton" id="feb20">Feb 20</li>
               <li class="datebutton" id="feb21">Feb 21</li>
               <li class="datebutton" id="feb22">Feb 22</li>
+
+              <!-- basic slider code, to be activated soon
+              <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+              </div>-->
           </div>
         </div>
 
@@ -109,12 +115,12 @@
     whatever is possible-->
       <div class="twittercontainer">
         <div class="container output">
-          <p>Date:<span id="dateoutput">
-          </p>
+          <p>Hashtag: <span id="hashtagoutput"><span></p>
         </div>
 
         <div class="container output">
-          <p>Hashtag: <span id="hashtagoutput"><span></p>
+          <p>Date:<span id="dateoutput">
+          </p>
         </div>
 
         <div class="container output">
@@ -126,7 +132,7 @@
         </div>
 
         <div class="container output">
-          <p>Just One more<span id="Justonemore:"></span></p>
+          <p>Just One more:<span id="Justonemore:"></span></p>
         </div>
 
       </div>
