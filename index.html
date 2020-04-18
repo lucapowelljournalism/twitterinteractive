@@ -77,7 +77,13 @@
           <!--div for each filter-->
           <div class="numero"><span>2 </span>Choose a date</div>
 
-          <div class="calendar">
+          <div class="slidecontainer">
+            <input type="range" min="15" max="46" value="0" class="slider" id="myRange">
+          </div>
+
+          <!--
+              <div class="calendar">
+            </div>
             <ul>
               <li class="datebutton" id="feb15">Feb 15</li>
               <li class="datebutton" id="feb16">Feb 16</li>
@@ -88,14 +94,14 @@
               <li class="datebutton" id="feb21">Feb 21</li>
               <li class="datebutton" id="feb22">Feb 22</li>
 
-              <!-- basic slider code, to be activated soon
+             basic slider code, to be activated soon
               <div class="slidecontainer">
                 <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
               </div>-->
-          </div>
         </div>
+      </div>
 
-        <!--<div class="frame"
+      <!--<div class="frame"
           <div class="numero"><span>3</span>Choose a language</div>
 
           <select class="filter">
@@ -106,7 +112,7 @@
             <option value="French">French</option>
           </select>-->
 
-      </div>
+
 
 
       <!--for design purposes, I added a div here which format the output section: twittercontainer.
@@ -125,6 +131,7 @@
 
         <div class="container output">
           <p>I'm trending baby: <span id="trendingoutput"></span></p>
+
         </div>
 
         <div class="container output">
@@ -175,7 +182,7 @@
         <br><br> - Below the map (while we don't have geocode)
       </div>
 
-    </div>
+
     </div>
 
     <!-- the jQuery library. You need this to be able to use jQuery ($) -->

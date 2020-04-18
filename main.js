@@ -15,3 +15,28 @@ $(".filter").on("change", function (e) { // Takes a hashtag input.
 		console.log("Publishing corresponding tweets!") //checks and writes both.
 	};
 });
+
+$("body").on("change", ".slider", function (e) {
+	//const hsearch = e.target;
+
+	const sliderValue = $(e.target).val();
+
+
+
+	var newDate = new Date(2020, 02, 15);
+	newDate.setDate(sliderValue);
+
+	month = newDate.toLocaleString('default', { month: 'long' });;
+	day = newDate.getDate();
+	year = newDate.getFullYear();
+	var finalDate = month + " " + day + " " + year
+	year;
+
+	console.log(finalDate)
+	$("#dateoutput").text(finalDate);
+});
+
+
+
+
+//	console.log(`img\/${hsearch}.png`)
