@@ -484,14 +484,15 @@ blockquote.twitter-tweet {}
     background-color: #F8F7F7;
     float: left;
     width: 100%;
-    height: 400px;
+    height: 600px;
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 blockquote.twitter-tweet {
     display: inline-block;
     font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
     line-height: 16px;
     border-color: #eee #ddd #bbb;
@@ -522,7 +523,12 @@ blockquote.twitter-tweet a:focus {
     text-decoration: underline;
 }
 
+/*keeps everything horizontal in the output text for Date: and Hashtag:*/
 .output p {
     display: inline;
-    /*keeps everything horizontal in the output text for Date: and Hashtag:
+}
+
+/*Keep the tweets displayed horizontally, across the screen.*/
+.tweet {
+    display: inline-block;
 }

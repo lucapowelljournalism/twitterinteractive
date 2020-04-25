@@ -1,11 +1,17 @@
+//Hashtag//
+
 let hashtag = " "
-let date_clicked = " "
+//let date_clicked = " "
+
+/* Commented out the Date buttons
 
 $(".calendar").on("click", function (e) { // Takes a date input.
 	e.preventDefault();
 	date_clicked = e.target.id
 	document.getElementById("dateoutput").innerHTML = date_clicked;
 });
+
+ */
 
 $(".filter").on("change", function (e) { // Takes a hashtag input.
 	hashtag = $(".filter").val();
@@ -22,7 +28,7 @@ $("body").on("change", ".slider", function (e) {
 	const sliderValue = $(e.target).val();
 
 
-
+	//Slider Javascript//
 	var newDate = new Date(2020, 02, 15);
 	newDate.setDate(sliderValue);
 
@@ -35,8 +41,3 @@ $("body").on("change", ".slider", function (e) {
 	console.log(finalDate)
 	$("#dateoutput").text(finalDate);
 });
-
-
-
-
-//	console.log(`img\/${hsearch}.png`)
