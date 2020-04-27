@@ -3,65 +3,45 @@
 
   <head>
     <meta charset="utf-8">
-    <!-- set the character set -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- first step to a responsive site -->
     <title>The Viral Twitter Virus</title>
-
-    <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-
-    <!-- Your styles should be called here -->
     <link rel="stylesheet" href="style.css" media="screen" />
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-      	<![endif]-->
   </head>
 
   <body>
-    <!-- YOUR CONTENT GOES HERE -->
-
-
-
 
     <div class="container">
 
-      <h1>Twitter Interactive! Ooh, baby! That's the spot!</h1>
+      <h1>The Viral Twitter Virus</h1>
       <div class="header">
         <h4>By: Luca Powell and Leonardo March</h4>
-        <span>Do you even twit, bro!<img src="img/twitter.png">
+        <span>Do you even tweet, bro!<img src="img/twitter.png">
           <a href="https://theuselessweb.com/">/Powell</a><img src="img/twitter.png">
           <a href="https://theuselessweb.com/">/March</a></span>
       </div>
 
       <div class="map"> <img src="img/world.svg"></div>
-      <div class="legend">I'm a legend! </div>
+      <!--<div class="legend">I'm a legend! </div>-->
 
       <div class=" text">
-        Task 1) Design a layout that is intuitive. Layout should encourage users to test multiple hashtags. Users should feel like their curiosity is rewarded. Moving throughout the interactive should be easy, not confusing, ideally.
+        As the world hunkered down, many took to tweeting. Here is an interactive that explores what was happening on social media, specifically Twitter, throughout that time period.<br><br>
+        Social media created a space for people to connect and get their news while in quarantine. It was also a space for folks to express their outrage, in some cases. In other cases, forums like Twitter, TikTok and Instagram
+        accelerated the spread of misinformation about the coronavirus, including everything from scams to sham cures.<br><br>
+        In the United States, many of the political echo chambers the predated Covid remained unaffected, retaining their right-left divide. On Twitter, that was evident. Many pro-Democratic voices criticized President Donald Trump's handling of
+        Covid. His critics swung daily at the pinata that was his newss briefings, where the President
+        often espoused unsafe medical treatments for covid and attacked reporters for asking aggressive questions.
+        <br><br>Meanwhile, voices from the political right attacked house Democrats. In particular, Nancy Pelosi drew the ire of conservatives for, "playing political games", with stimulus checks.
 
-        Simply CSS and Media Queries (Leo workin on this)
-        <br><br>\##LEO== CSS MASTER##
-        <br><br>To-do: Decide on mobile-friendly layout.
-        <br><br> Later: Styling rewarding results? (fly in tweets, etc.)
-        <br><br>MAYBE: Change date input to a slider.
+        But there's only one way to get a sense of how the Twitter-verse evolved throughout this crisis. Using hashtags, have a look at what was being said, and when, as Covid-19 washed over the world.
       </div>
 
       <div class="container tweets">
-
-
-
-
-        <!--Luca: there was a .container class, inside another container. class
-        I deleted the inner one-->
         <!--div for each filter.  .frame are just classes for design control-->
 
         <div class="frame">
-          <div class="numero"><span>1 </span>Choose a hastagh</div>
+          <div class="numero"><span>1 </span>Choose a hastag (Working: Coronavirus and Cuarentena)</div>
 
           <select class="filter">
             <option> -Select a Hashtag-</option>
@@ -80,40 +60,8 @@
           <div class="slidecontainer">
             <input type="range" min="15" max="46" value="0" class="slider" id="myRange">
           </div>
-
-          <!--
-              <div class="calendar">
-            </div>
-            <ul>
-              <li class="datebutton" id="feb15">Feb 15</li>
-              <li class="datebutton" id="feb16">Feb 16</li>
-              <li class="datebutton" id="feb17">Feb 17</li>
-              <li class="datebutton" id="feb18">Feb 18</li>
-              <li class="datebutton" id="feb19">Feb 19</li>
-              <li class="datebutton" id="feb20">Feb 20</li>
-              <li class="datebutton" id="feb21">Feb 21</li>
-              <li class="datebutton" id="feb22">Feb 22</li>
-
-             basic slider code, to be activated soon
-              <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-              </div>-->
         </div>
       </div>
-
-      <!--<div class="frame"
-          <div class="numero"><span>3</span>Choose a language</div>
-
-          <select class="filter">
-            <option value="Language">Language</option>
-            <option value="English">English</option>
-            <option value="Spanish">Spanish</option>
-            <option value="Italian">Italian</option>
-            <option value="French">French</option>
-          </select>-->
-
-
-
 
       <!--for design purposes, I added a div here which format the output section: twittercontainer.
     I also added a Trending section. I seeing this placed on a line, evenly spaced out. we can come add other
@@ -147,46 +95,11 @@
       <div class="container output" id="threetweetdisplaybox">
         <div class="output">Tweets go here, here and here</div>
         <!--TweetFrame goes here-->
-        <div>
-          <!--Tweet 1-->
-          <blockquote class="twitter-tweet">
-            <p lang="en" dir="ltr">BREAKING: <a href="https://twitter.com/realDonaldTrump?ref_src=twsrc%5Etfw">@RealDonaldTrump</a> admin believes it likely Wuhan <a
-                href="https://twitter.com/hashtag/coronavirus?src=hash&amp;ref_src=twsrc%5Etfw">#coronavirus</a> came from lab according to <a href="https://twitter.com/FoxNews?ref_src=twsrc%5Etfw">@FoxNews</a> sources.</p>&mdash; Tom Fitton
-            (@TomFitton) <a href="https://twitter.com/TomFitton/status/1250555872381751301?ref_src=twsrc%5Etfw">April 15, 2020</a>
-          </blockquote>
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <div class="tweet"><span id="tweet1"></span>
         </div>
-        <div>
-          <!--Tweet 2-->
-        </div>
-        <div>
-          <!--Tweet 3-->>
-        </div>
+
+
       </div>
-
-      <div class="container contenttext">
-        <br><br>
-        <p>THIS IS FILLER Text, but we should probably have some down here too, maybe discussing some trends we found out about how
-          social media changed during covid.</p> <span id="trendingoutput">note from Leo:Yes, but this analysis should go at the top. Right before instructions</span></p>
-        <br><br>Task 2) Create a database (CSV) of tweets from Twitter's API that sorts tweets by these columns. ##Luca working on this
-        <br><br>Header Row: Hashtag, date, Geo_code(we just want country?), Tweet_Content, username
-        <br><br> Hashtag: Our basic idea is to use 5 hashtags only. But with Twitter API we can hopefully scrape more hashtags, from any time period. This means we will have two plans:
-        <br><br> Plan 1: 5 hashtags, already scraped.
-        <br><br> Plan 2: 10, 15 hashtags, from a broader time period. This plan depends on Luca learning how to scrape Twitter! He has a developer key though already, just needs to learn :)
-
-        <br><br>Task 3) Display tweets corresponding to user inputs. ##Leo and Luca
-        <br><br>First, select the correct tweets from the database
-        <br><br>Next, give the tweetss to the browser in some kind of format (could be images, more likely it could be our own 'fake' tweet css).
-        <br><br>Then, display the Tweet:
-        <br><br> - Either on the map (if we have geocode!)
-        <br><br> - Below the map (while we don't have geocode)
-      </div>
-
-
-    </div>
-
-    <!-- the jQuery library. You need this to be able to use jQuery ($) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     </div>
     <!-- the jQuery library. You need this to be able to use jQuery ($) -->
