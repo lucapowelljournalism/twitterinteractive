@@ -1,21 +1,27 @@
 /*------------------------------------------------Functions-----------------------------------*/
+x = ""
 
 function chooseUrl(hashtag) { //This is a function to determine which spreadsheet to access based off of user input.
-	if (hashtag === "cuarantena") {
-		let url = "https://spreadsheets.google.com/feeds/list/15sxSPlNUgDd_-LMW4D_ynPj0PeIv1bThE2QQvgWxEQw/1/public/values?alt=json"
-		return url;
-	} else if (hashtag === "socialdistancing") {
-		let url = "https://spreadsheets.google.com/feeds/list/1rU8fTnG-ta6_06ufG2-0B6e_Q74R0HX6HVdSM24I0js/1/public/values?alt=json"
-		return url;
-	} else if (hashtag === "quarantinelife") {
-		let url = "https://spreadsheets.google.com/feeds/list/1SkG_zGxAy8cEbXdbPyHnd2588HwU4-Tn1EeAdybvMxk/1/public/values?alt=json"
-		return url;
-	} else if (hashtag === "stayathomechallenge") {
-		let url = "https://spreadsheets.google.com/feeds/list/1u5d025lcRbPXjxKMbmvFFFcCtFXBYgKP7Q_3vkC2lXg/1/public/values?alt=json"
-		return url;
-	} else if (hashtag === "coronavirus") {
-		let url = "https://spreadsheets.google.com/feeds/list/1nmQi2ZiJbjGNy6OMtp2ZY7B9U4GMe7rlecZXbqDwwHU/1/public/values?alt=json"
-		return url;
+	if (hashtag === "#cuarentena") {
+		let x = "https://spreadsheets.google.com/feeds/list/15sxSPlNUgDd_-LMW4D_ynPj0PeIv1bThE2QQvgWxEQw/1/public/values?alt=json"
+		return x
+		console.log('chooseURL worked');
+	} else if (hashtag === "#socialdistancing") {
+		let x = "https://spreadsheets.google.com/feeds/list/1rU8fTnG-ta6_06ufG2-0B6e_Q74R0HX6HVdSM24I0js/1/public/values?alt=json"
+		return x
+		console.log('chooseURL worked');
+	} else if (hashtag === "#quarantinelife") {
+		let x = "https://spreadsheets.google.com/feeds/list/1SkG_zGxAy8cEbXdbPyHnd2588HwU4-Tn1EeAdybvMxk/1/public/values?alt=json"
+		return x
+		console.log('chooseURL worked');
+	} else if (hashtag === "#stayathomechallenge") {
+		let x = "https://spreadsheets.google.com/feeds/list/1u5d025lcRbPXjxKMbmvFFFcCtFXBYgKP7Q_3vkC2lXg/1/public/values?alt=json"
+		return x
+		console.log('chooseURL worked');
+	} else if (hashtag === "#coronavirus") {
+		let x = "https://spreadsheets.google.com/feeds/list/1nmQi2ZiJbjGNy6OMtp2ZY7B9U4GMe7rlecZXbqDwwHU/1/public/values?alt=json"
+		return x
+		console.log('chooseURL worked');
 	}
 }
 
@@ -29,13 +35,12 @@ function getData(entry, property) { // This is a function for retrieving info fr
 }
 
 /*-------------------------------End of Pre-Built Functions-----------------------------------*/
-const url = "https://spreadsheets.google.com/feeds/list/1nmQi2ZiJbjGNy6OMtp2ZY7B9U4GMe7rlecZXbqDwwHU/1/public/values?alt=json"
-
+url = ""
 //Code for taking input from hashtag select menu and storing into variable 'hashtag'
 $(".filter").on("change", function (e) { // Takes a hashtag input.
 	hashtag = $(".filter").val(); // Saves selected value to hashtag
 	$("#hashtagoutput").text(hashtag) //writes hashtag to the HTML
-
+	url = chooseUrl(hashtag)
 
 	//Code for taking input from slider select and storing into variable finalDate
 	$("body").on("change", ".slider", function (e) {
