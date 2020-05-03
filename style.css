@@ -10,34 +10,33 @@ html, body {
     font-family: Verdana, sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
+
 /*------Webpage layout for Mobile Small Screens-----*/
 @media screen and (min-device-width: 200px) {
+    html, body {
+        background-color: black;
+        color: white;
+    }
+
     .container {
         width: 85%;
         margin: 0 auto;
-        padding: 1em;
         height: auto;
-        min-width: 400px;
+        min-width: 300px;
         max-width: 500px;
-    }
-
-    .map {
-        display: none;
     }
 
     h1 {
         text-align: left;
         line-height: 1.25em;
         font-size: 2em;
-    }
-
-    h4 {
-        margin-left: 0;
-        font-size: 1em
-    }
-
-    .legend {
-        display: none;
     }
 
     .header {
@@ -50,20 +49,27 @@ html, body {
     }
 
     .header img {
+        /*Style for twitter icons*/
         display: inline;
         padding: 0;
         width: 30px;
+        border-radius: 50%;
     }
 
-    .header span {
-        text-align: center;
-        padding-bottom: 10px;
+    .map {
+        /*Hides the map for mobile*/
+        display: none;
+    }
+
+    .legend {
+        /*Hides the legend for mobile*/
+        display: none;
     }
 
     .text {
         width: 100%;
         font-size: .80em;
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     .frame {
@@ -75,23 +81,32 @@ html, body {
         margin-bottom: 10px;
     }
 
+    .numero {
+        padding-bottom: 10px;
+    }
+
+    .numero span {
+        border-radius: 5px;
+        background: #1DA1F2;
+        padding: 5px;
+        font-weight: bold;
+        color: white;
+        font-size: 1.75em;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
     .filter {
         float: left;
         width: 80%;
         text-align: left;
         display: block;
         height: 30px;
-        background-color: #BDCEDA;
+        background-color: #white;
         border: 0;
         font-size: .75em;
         font: white;
         padding-left: 5px
-    }
-
-    .slidecontainer {}
-
-    .container .tweets {
-        width: 100%;
     }
 
     .container .output {
@@ -108,6 +123,10 @@ html, body {
         border-top: 1px dotted #BDCEDA
     }
 
+    .inactive {
+        display: none;
+    }
+
     .container.output {
         float: left;
         font-size: .75em;
@@ -115,39 +134,12 @@ html, body {
         width: 100%;
     }
 
-    .numero {
-        padding-bottom: 10px;
-    }
-
-    .numero span {
-        border-radius: 20px;
-        width: 25px;
-        height: 25px;
-        background: #BDCEDA;
-        font-family: Verdana;
-        font-weight: bold;
-        color: white;
-        font-size: 1.75em;
-        vertical-align: middle;
-        float: left;
-        margin-right: 10px;
-    }
-
     #dateoutput, #hashtagoutput, #trendingoutput {
         color: red;
         margin-left: 5px;
     }
 
-    ul {
-        padding: 0px;
-        margin: 0px;
-    }
-
-    .container.tweets {
-        margin-left: 0px;
-        padding: 0px;
-    }
-
+    /***************Slider CSS************/
     .slidecontainer {
         display: inline;
         height: 20px;
@@ -161,9 +153,9 @@ html, body {
         appearance: none;
         width: 80%;
         height: 25px;
-        background: #d3d3d3;
+        background: white;
         outline: none;
-        opacity: 0.7;
+        opacity: 0.9;
         -webkit-transition: .2s;
         transition: opacity .2s;
     }
@@ -173,15 +165,53 @@ html, body {
         appearance: none;
         width: 25px;
         height: 25px;
-        background: red;
+        background: #1DA1F2;
         cursor: pointer;
     }
 
-    /*Slider CSS code courtey of w3schools.com*/
+    /****************END SLIDER CSS*************/
+    .tweetbox {
+        background-color: black;
+    }
+
+    /******Styles for Twitter Format ***********/
+    blockquote.twitter-tweet {
+        display: inline-block;
+        font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        line-height: 16px;
+        border-color: #eee #ddd #bbb;
+        border-radius: 5px;
+        border-style: solid;
+        border-width: 1px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+        margin: 10px 5px;
+        padding: 0 16px 16px 16px;
+        max-width: 468px;
+    }
+
+    blockquote.twitter-tweet p {
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 20px;
+    }
+
+    blockquote.twitter-tweet a {
+        color: black;
+        font-weight: normal;
+        text-decoration: none;
+        outline: 0 none;
+    }
+
+    blockquote.twitter-tweet a:hover,
+    blockquote.twitter-tweet a:focus {
+        text-decoration: underline;
+    }
 }
 
-/*------Webpage layout for Medium Size-----*/
-@media screen and (min-width: 676px) and (max-width: 1100px) {
+/*------Webpage layout for Medium Size: Tablet to Small Computer-----*/
+@media screen and (min-width: 500px) and (max-width: 1100px) {
     h1, h2, h4 {
         text-align: left;
         line-height: 1em;

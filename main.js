@@ -47,7 +47,7 @@ $(".filter").on("change", function (e) { // Takes a hashtag input.
 		//const hsearch = e.target;
 
 		const sliderValue = $(e.target).val();
-
+		console.log(sliderValue)
 		//Slider Javascript//
 		var newDate = new Date(2020, 03, 01);
 		newDate.setDate(sliderValue);
