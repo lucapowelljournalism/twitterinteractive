@@ -49,7 +49,7 @@ $(".filter").on("change", function (e) { // Takes a hashtag input.
 		const sliderValue = $(e.target).val();
 
 		//Slider Javascript//
-		var newDate = new Date(2020, 02, 15);
+		var newDate = new Date(2020, 03, 01);
 		newDate.setDate(sliderValue);
 
 		month = newDate.toLocaleString('default', { month: 'long' });;
@@ -59,9 +59,9 @@ $(".filter").on("change", function (e) { // Takes a hashtag input.
 		$("#dateoutput").text(finalDate); //writes finalDate to the HTML
 		console.log(finalDate)
 
-		if (hashtag != "" && finalDate != "") { //Check to see if both inputs have been filled. BROKEN
+		if (hashtag != "" && finalDate != "") { //Check to see if both inputs have been filled. BROKEN: Needs to rerun everytime there is a new hashtag, not only on new date.
 			let data;
-			fetch(url)
+			fetch(url) //jquery function that gets a url
 				.then(r => r.json())
 				.then(d => {
 					data = d.feed.entry; //data is an array
