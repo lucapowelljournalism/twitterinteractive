@@ -48,12 +48,18 @@ a:visited {
         border-bottom: 1px dotted #BDCEDA;
     }
 
+    .header a {
+        padding: 5px;
+    }
+
     .header img {
         /*Style for twitter icons*/
         display: inline;
-        padding: 0;
-        width: 30px;
+        width: 20px;
+        margin-left: 10px;
         border-radius: 50%;
+        cursor: pointer;
+        z-index: 2;
     }
 
     .map {
@@ -177,6 +183,8 @@ a:visited {
     /******Styles for Twitter Format ***********/
     blockquote.twitter-tweet {
         display: inline-block;
+        background-color: white;
+        color: black;
         font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
         font-size: 10px;
         font-weight: bold;
