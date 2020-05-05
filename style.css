@@ -126,7 +126,10 @@ a:visited {
         border: 0;
         font-size: .75em;
         font: white;
-        padding-left: 5px
+        padding-left: 5px;
+        position: relative;
+        left: 50px;
+        top: -10px;
     }
 
     .container .output {
@@ -160,20 +163,35 @@ a:visited {
     }
 
     .tweetbox.title {
-        width: 86%;
+        width: 100%;
         font-weight: bolder;
         font-size: 3em;
         border-top: 1px dotted #BDCEDA;
         padding-top: 40px;
     }
 
+    /*---------- footer --------*/
     .bottom {
-        margin-top: 30px;
-        margin-bottom: 30px;
         border-top: 1px dotted #BDCEDA;
         padding-top: 10px;
         font-size: .75em;
         color: #1DA1F2;
+        display: inline;
+        width: 100%;
+    }
+
+    .bottom p {
+        display: inline;
+        vertical-align: middle;
+    }
+
+    .bottom img {
+        width: 30px;
+        display: inline;
+        padding-left: 5px;
+        vertical-align: middle;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
     /***************Slider CSS************/
@@ -251,7 +269,7 @@ a:visited {
 }
 
 /*------Webpage layout for Medium Size: Tablet to Small Computer-----*/
-@media screen and (min-width: 500px) and (max-width: 1100px) {
+@media screen and (min-width: 600px) and (max-width: 1100px) {
     h1, h2, h4 {
         text-align: left;
         line-height: 1em;
@@ -289,10 +307,9 @@ a:visited {
 
     .header span {
         display: inline;
-        width: 49%;
-        padding-top: 8px;
         padding-bottom: 5px;
         font-size: .95em;
+        float: right;
     }
 
     .map {
@@ -307,9 +324,16 @@ a:visited {
         height: 60px;
     }
 
+    .numero span {
+        font-size: 1.35em;
+    }
+
     .filter {
         float: right;
-        width: 60%
+        width: 60%;
+        position: relative;
+        left: 0px;
+        top: 0px;
     }
 
     .text {
@@ -331,6 +355,7 @@ a:visited {
         width: 60%;
         display: inline;
         height: 15px;
+        float: right;
     }
 
     .slidecontainer {
@@ -344,6 +369,26 @@ a:visited {
         height: 20px;
         background: #1DA1F2;
         cursor: pointer;
+    }
+
+    /*---------- footer --------*/
+    .bottom {
+        width: 100%;
+        display: block;
+        margin-top: 10px;
+        padding-top: 0px;
+        height: 20px;
+    }
+
+    .bottom p {
+        vertical-align: middle;
+    }
+
+    .bottom img {
+        width: 30px;
+        padding-left: 5px;
+        vertical-align: middle;
+        margin-bottom: 30px;
     }
 }
 
@@ -392,24 +437,19 @@ a:visited {
     .header {
         border-top: 1px dotted #BDCEDA;
         border-bottom: 1px dotted #BDCEDA;
-        width: 100%;
-        margin: 0 auto;
-        padding-top: 3px;
-        padding-bottom: 3px;
-        margin-bottom: 10px
+        padding-top: 10px;
+        padding-bottom: 5px;
     }
 
     .header img {
-        height: 15px;
-        display: inline-flex;
-        padding: 0;
+        width: 15px;
     }
 
     .header span {
-        display: inline-flex;
+        display: inline;
+        padding-bottom: 5px;
+        font-size: .95em;
         float: right;
-        margin-right: 15px;
-        padding-top: 3px;
     }
 
     .text {
@@ -448,17 +488,9 @@ a:visited {
         display: inline-block;
     }
 
-    .filter {
-        width: 60%;
-        display: block;
-        float: right;
-        padding-left: 5px;
-        margin-top: 0px
-    }
-
     .frame {
         border-top: 1px dotted #BDCEDA;
-        width: 49%;
+        width: 48%;
         display: inline-block;
         padding-top: 15px;
         margin-left: 10px;
@@ -471,6 +503,7 @@ a:visited {
         display: inline-flex;
         height: 40px;
         width: 70%;
+        vertical-align: middle;
     }
 
     .numero span {
@@ -494,6 +527,18 @@ a:visited {
         margin: 0;
         padding: 0;
         width: 60%;
+    }
+
+    .filter {
+        width: 60%;
+        display: block;
+        float: right;
+        padding-left: 5px;
+        margin-top: 0px;
+        vertical-align: middle;
+        position: relative;
+        top: -2px;
+        left: -5px;
     }
 
     .slidecontainer {
