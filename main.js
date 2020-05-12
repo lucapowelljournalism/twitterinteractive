@@ -7,7 +7,7 @@ function chooseUrl(hashtag) { //This is a function to determine which spreadshee
 		return x
 		console.log('chooseURL worked');
 	} else if (hashtag === "#socialdistancing") {
-		let x = "https://spreadsheets.google.com/feeds/list/1rU8fTnG-ta6_06ufG2-0B6e_Q74R0HX6HVdSM24I0js/1/public/values?alt=json"
+		let x = "https://spreadsheets.google.com/feeds/list/1wo98z5203GH7-Qcek9I4XjHIIz_3_6y8DfovGjSVm68/1/public/values?alt=json"
 		return x
 		console.log('chooseURL worked');
 	} else if (hashtag === "#quarantinelife") {
@@ -25,10 +25,10 @@ function chooseUrl(hashtag) { //This is a function to determine which spreadshee
 	}
 }
 
-function getData(entry, property) { // This is a function for retrieving info from json that we get from Google Sheets. Thank you, TC for this one!
+function getData(entry, property) { // Entry = row, property = column
 	property = property.replace(/[^A-Za-z0-9]+/, "").toLowerCase(); //puts things in lower case and removes non-alphanumeric characters
 	const item = entry[`gsx$${property}`];
-	if (item.$t) {
+	if (item.$t) { //if it has $t then give me it, if it doesn't return without $t = text in the cell, wont be there if no text.
 		return item.$t;
 	}
 	return item;
@@ -67,10 +67,42 @@ $(".filter").on("change", function (e) { // Takes a hashtag input.
 					data = d.feed.entry; //data is an array
 				})
 				.then(() => {
-					const tweets = data.filter(row => getData(row, 'Date') === finalDate)
-					tweets.forEach(tweet => embedcode = (getData(tweet, 'embed'))) //captures the embed code, but only within this function
-					document.getElementById("tweet1").innerHTML = embedcode
+					const tweets = data.filter(row => getData(row, 'Date') === finalDate) //tweets is every row where the date = finaldate
+					shuffle(tweets);
+					const three = tweets.splice(0, 3);
+
+					console.log("hi!");
+					three.forEach((row, i) => {
+						let embedcode = getData(row, "embed");
+						const tweet_number = i + 1;
+						embedcode = embedcode.replace(/<script([^\/]+)\/script>/, "");
+						document.getElementById(`tweet${tweet_number}`).innerHTML = embedcode;
+					});
+
+					addTwitterJS();
+
 				});
 		};
 	});
 });
+
+function addTwitterJS() {
+	const newScript = document.createElement("script");
+	newScript.src = "https://platform.twitter.com/widgets.js";
+	newScript.async = true;
+	newScript.charset = "utf-8";
+
+	document.querySelector("body").appendChild(newScript);
+}
+
+/**
+ * Shuffles array in place. ES6 version
+ * @param {Array} a items An array containing the items.
+ */
+function shuffle(a) {
+	for (let i = a.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+	}
+	return a;
+}
