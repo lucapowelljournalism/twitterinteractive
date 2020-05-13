@@ -213,6 +213,7 @@ a:visited {
     .tweetbox {
         margin-top: 5px;
         color: #1DA1F2;
+        display: flex;
     }
 
     /******Styles for Twitter Format ***********/
@@ -309,6 +310,7 @@ a:visited {
         padding-bottom: 0;
         margin-bottom: 0;
         height: 60px;
+        display: flex;
     }
 
     .numero span {
@@ -316,11 +318,14 @@ a:visited {
     }
 
     .filter {
-        float: right;
         width: 60%;
+        display: block;
+        float: right;
+        padding-left: 5px;
+        margin-top: 0px;
         position: relative;
-        left: 0px;
-        top: 0px;
+        top: -2px;
+        left: -5px;
     }
 
     .text {
@@ -454,8 +459,8 @@ a:visited {
 
     .frame {
         border-top: 1px dotted #BDCEDA;
-        width: 45%;
-        display: inline-block;
+        width: 100%;
+        display: flex;
         padding-top: 15px;
         margin-left: 10px;
         padding-bottom: 0;
@@ -499,7 +504,6 @@ a:visited {
         float: right;
         padding-left: 5px;
         margin-top: 0px;
-        vertical-align: middle;
         position: relative;
         top: -2px;
         left: -5px;
@@ -606,6 +610,11 @@ blockquote.twitter-tweet a {
 blockquote.twitter-tweet a:hover,
 blockquote.twitter-tweet a:focus {
     text-decoration: underline;
+}
+
+#tweet1, #tweet2, #tweet3 {
+    width: 25%;
+    margin-left: 3px;
 }
 
 /*keeps everything horizontal in the output text for Date: and Hashtag:*/
