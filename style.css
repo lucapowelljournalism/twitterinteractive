@@ -166,7 +166,7 @@ a:visited {
     .tweetbox.title {
         width: 100%;
         font-weight: bolder;
-        font-size: 3em;
+        font-size: 2em;
         border-top: 1px dotted #BDCEDA;
         padding-top: 40px;
     }
