@@ -73,8 +73,6 @@ $(".filter").on("change", function (e) { // Takes a hashtag input.
 					const tweets = data.filter(row => getData(row, 'Date') === finalDate) //tweets is every row where the date = finaldate
 					shuffle(tweets);
 					const three = tweets.splice(0, 3);
-
-					console.log("hi!");
 					three.forEach((row, i) => {
 						let embedcode = getData(row, "embed");
 						const tweet_number = i + 1;

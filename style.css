@@ -18,7 +18,45 @@ a:visited {
     color: white;
 }
 
-/*------Webpage layout for Mobile Small Screens-----*/
+blockquote.twitter-tweet {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+    font-size: .1em;
+    font-weight: bold;
+    line-height: 16px;
+    border-color: #eee #ddd #bbb;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    margin: 10px 5px;
+    padding: 0 16px 16px 16px;
+    max-width: 468px;
+}
+
+blockquote.twitter-tweet p {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+    height: auto;
+    max-width: 300px;
+}
+
+blockquote.twitter-tweet a {
+    color: black;
+    font-weight: normal;
+    text-decoration: none;
+    outline: 0 none;
+}
+
+blockquote.twitter-tweet a:hover,
+blockquote.twitter-tweet a:focus {
+    text-decoration: underline;
+}
+
+/*------Mobile-----*/
 @media screen and (min-device-width: 200px) {
     html, body {
         background-color: black;
@@ -33,10 +71,15 @@ a:visited {
         max-width: 500px;
     }
 
+    .center {
+        text-align: center;
+    }
+
     h1 {
         text-align: left;
         line-height: 1.25em;
-        font-size: 2em;
+        font-size: 2.5em;
+        text-shadow: 2.5px 2.5px #1DA1F2;
     }
 
     h6 {
@@ -63,11 +106,6 @@ a:visited {
         cursor: pointer;
         z-index: 2;
         vertical-align: middle;
-    }
-
-    .map {
-        /*Hides the map for mobile*/
-        display: none;
     }
 
     .text {
@@ -172,6 +210,7 @@ a:visited {
     }
 
     /*---------- footer --------*/
+
     .bottom {
         border-top: 1px dotted #BDCEDA;
         padding-top: 10px;
@@ -195,7 +234,6 @@ a:visited {
         margin-bottom: 30px;
     }
 
-    /***************Slider CSS************/
     .slider {
         -webkit-appearance: none;
         appearance: none;
@@ -217,59 +255,28 @@ a:visited {
         cursor: pointer;
     }
 
-    /****************END SLIDER CSS*************/
     .tweetbox {
         margin-top: 5px;
         color: #1DA1F2;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
         width: 80%;
         margin: 0 auto;
+        max-width: 500px;
+    }
+
+    .tweetbox.title {
+        width: 100%;
+        font-weight: bolder;
+        font-size: 3em;
+        border-top: 1px dotted #BDCEDA;
+        padding-top: 40px;
+    }
+
+    #tweet2, #tweet3 {
+        display: none;
     }
 }
 
-/******Styles for Twitter Format ***********/
-blockquote.twitter-tweet {
-    display: inline-block;
-    background-color: white;
-    color: black;
-    font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
-    font-size: .1em;
-    font-weight: bold;
-    line-height: 16px;
-    border-color: #eee #ddd #bbb;
-    border-radius: 5px;
-    border-style: solid;
-    border-width: 1px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-    margin: 10px 5px;
-    padding: 0 16px 16px 16px;
-    max-width: 468px;
-}
-
-blockquote.twitter-tweet p {
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 20px;
-    height: auto;
-    max-width: 300px;
-}
-
-blockquote.twitter-tweet a {
-    color: black;
-    font-weight: normal;
-    text-decoration: none;
-    outline: 0 none;
-}
-
-blockquote.twitter-tweet a:hover,
-blockquote.twitter-tweet a:focus {
-    text-decoration: underline;
-}
-}
-
-/*------Webpage layout for Medium Size: Tablet to Small Computer-----*/
+/*------Tablet to Small Computer-----*/
 @media screen and (min-width: 600px) and (max-width: 1100px) {
     h1, h2, h4 {
         text-align: left;
@@ -310,7 +317,6 @@ blockquote.twitter-tweet a:focus {
         display: inline;
         padding-bottom: 5px;
         font-size: .95em;
-        float: right;
     }
 
     .map {
@@ -355,64 +361,12 @@ blockquote.twitter-tweet a:focus {
         column-count: 2;
     }
 
-    .legend {
-        width: 50px;
-        height: 50px;
-        background-color: #BDCEDA;
-        z-index: 1;
-        display: inline;
-    }
-
-    .slider {
-        width: 100%;
-        display: inline;
-        height: 20px;
-        float: right;
-    }
-
-    .slidecontainer {
-        height: 15px;
-    }
-
-    .slider::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        appearance: none;
-        width: 20px;
-        height: 20px;
-        background: #1DA1F2;
-        cursor: pointer;
-    }
-
-    /*---------- footer --------*/
-    .bottom {
-        width: 100%;
-        display: block;
-        margin-top: 10px;
-        padding-top: 0px;
-        height: 20px;
-    }
-
-    .bottom p {
-        vertical-align: middle;
-    }
-
-    .bottom img {
-        width: 30px;
-        padding-left: 5px;
-        vertical-align: middle;
-        margin-bottom: 30px;
-    }
-
     .tweetbox {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        width: 80%;
-        margin: 0 auto;
+        width: 75%;
     }
 }
 
-/*------ Webpage Layout ------Big Screens*/
+/*------ Big Screens---------------*/
 @media only screen and (min-device-width: 1101px) {
     h1 {
         text-align: left;
@@ -555,6 +509,7 @@ blockquote.twitter-tweet a:focus {
         justify-content: space-around;
         width: 80%;
         margin: 0 auto;
+        max-width: none;
     }
 
     .tweetbox>div {
@@ -564,95 +519,10 @@ blockquote.twitter-tweet a:focus {
     .tweetbox twitter-widget {
         width: auto !important;
     }
-}
 
-/* ------- Luca Code ------*/
-.calendar {
-    margin-top: 0px;
-    float: right;
-    height: 100%;
-}
-
-li {
-    display: inline;
-    line-height: 2em;
-    padding: 10px;
-    border-style: inset;
-}
-
-.datebutton {
-    background-color: #BDCEDA;
-    border: none;
-    font-size: .75em;
-    width: 20px;
-    padding: 4px;
-}
-
-.output {
-    text-align: left;
-    font-size: 20px;
-    text-transform: uppercase;
-    height: 20px;
-    margin-left: 10px;
-    margin-top: 5px;
-}
-
-.output p {
-    display: inline;
-}
-
-blockquote.twitter-tweet {}
-
-#threetweetdisplaybox {
-    position: relative;
-    background-color: #F8F7F7;
-    float: left;
-    width: 100%;
-    height: 600px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-blockquote.twitter-tweet {
-    display: inline-block;
-    font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
-    font-size: 10px;
-    font-weight: bold;
-    line-height: 16px;
-    border-color: #eee #ddd #bbb;
-    border-radius: 5px;
-    border-style: solid;
-    border-width: 1px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-    margin: 10px 5px;
-    padding: 0 16px 16px 16px;
-    max-width: 468px;
-}
-
-blockquote.twitter-tweet p {
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 20px;
-}
-
-blockquote.twitter-tweet a {
-    color: inherit;
-    font-weight: normal;
-    text-decoration: none;
-    outline: 0 none;
-}
-
-blockquote.twitter-tweet a:hover,
-blockquote.twitter-tweet a:focus {
-    text-decoration: underline;
-}
-
-#tweet1, #tweet2, #tweet3 {
-    width: 25%;
-    margin-left: 3px;
-}
-
-/*keeps everything horizontal in the output text for Date: and Hashtag:*/
-.output p {
-    display: inline;
+    #tweet1, #tweet2, #tweet3 {
+        display: flex;
+        width: 25%;
+        margin-left: 3px;
+    }
 }
