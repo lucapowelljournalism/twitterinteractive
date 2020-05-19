@@ -65,6 +65,7 @@ $(".filter").on("change", function (e) { // Takes a hashtag input.
       $("#dateoutput").text(finalDate); //writes finalDate to the HTML
       $("#datechosen").text(completeDate);
 
+
       console.log(finalDate)
 
       if (hashtag != "" && finalDate != "") { //Check to see if both inputs have been filled. BROKEN: Needs to rerun everytime there is a new hashtag, not only on new date.
