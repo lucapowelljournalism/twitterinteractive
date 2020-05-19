@@ -201,6 +201,16 @@ blockquote.twitter-tweet a:focus {
         margin-left: 5px;
     }
 
+    .tweetbox.title {
+        width: 100%;
+        font-weight: bolder;
+        font-size: 2em;
+        border-top: 1px dotted #BDCEDA;
+        padding-top: 40px;
+    }
+
+    /*---------- footer --------*/
+
     .bottom {
         border-top: 1px dotted #BDCEDA;
         padding-top: 10px;

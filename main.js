@@ -58,7 +58,7 @@ $(".filter").on("change", function (e) { // Takes a hashtag input.
 		var finalDate = month + " " + day; //+ " " + year        //saves the info to the variable finalDate
 		var completeDate = finalDate + " " + ",2020"
 		$("#dateoutput").text(finalDate); //writes finalDate to the HTML
-		$("#datechosen").text(completeDate);
+		$("#datechosen").text(completeDate); //writes finalDate to the slider
 
 		console.log(finalDate)
 
